@@ -10,4 +10,6 @@ import "./js/begin9.js";
 import "./js/begin10.js";
 import "./js/begin11.js";
 import "./js/begin12.js";
+import "./js/begin13.js";
+import "./js/begin14.js";
 import "./js/doli.js";
