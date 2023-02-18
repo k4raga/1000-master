@@ -1,0 +1,13 @@
+import "./js/begin1.js";
+import "./js/begin2.js";
+import "./js/begin3.js";
+import "./js/begin4.js";
+import "./js/begin5.js";
+import "./js/begin6.js";
+import "./js/begin7.js";
+import "./js/begin8.js";
+import "./js/begin9.js";
+import "./js/begin10.js";
+import "./js/begin11.js";
+import "./js/begin12.js";
+import "./js/doli.js";
