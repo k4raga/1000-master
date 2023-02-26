@@ -26,14 +26,14 @@ btn2.addEventListener("click", () => {
 	answ.textContent =
 		"Доля фактическая" +
 		" " +
-		pr.toFixed(2) +
+		pr.toFixed(3) +
 		"%" +
 		"Доли участников" +
 		" " +
-		pr_uchas.toFixed(2) +
+		pr_uchas.toFixed(3) +
 		"%" +
 		" " +
-		na_osnovanie.toFixed(2) +
+		na_osnovanie.toFixed(3) +
 		"/" +
-		osn.toFixed(2);
+		osn.toFixed(3);
 });
