@@ -1,0 +1,97 @@
+@font-face {
+	font-family: Source-reg;
+	src: url("./src/fonts/SourceSansPro-Regular.ttf");
+}
+
+@font-face {
+	font-family: Source-bold;
+	src: url("./src/fonts/SourceSansPro-SemiBold.ttf");
+}
+
+body {
+	font-family: Source-reg;
+	background-color: #fffacd;
+}
+
+section {
+	display: grid;
+	max-width: 768px;
+	margin: auto;
+}
+
+h1 {
+	font-family: Source-bold;
+	font-size: 48px;
+	color: #363636;
+	margin: auto;
+	max-width: 768px;
+	margin-bottom: 64px;
+}
+
+h2 {
+	font-family: Source-bold;
+	font-size: 36px;
+	color: #363636;
+	max-width: 768px;
+	margin-bottom: 18px;
+}
+
+h3 {
+	font-family: Source-reg;
+	font-weight: 400;
+	font-size: 18px;
+	color: #111;
+}
+.input-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+input[type=text] {
+	height: 32px;
+	width: 40%;
+	background-color: #f1f1f1;
+	border-radius: 0px;
+	border: solid 1px #dedede;
+	border-radius: 1px;
+	padding: 4px 16px;
+	font-size: 18px;
+	font-family: Source-reg;
+	color: #111;
+}
+
+.input:active,
+.input:hover,
+.input:focus {
+	border: solid 1px #c6c6c6;
+	outline: none;
+}
+
+.button {
+	height: 32px;
+	width: 20%;
+	font-style: Source-bold;
+	font-weight: 700;
+	border: solid 1px #dedede;
+	background-color: #dedede;
+	color: white;
+}
+.button:hover {
+	background-color: #f1f1f1;
+	color: #111;
+}
+
+.answer {
+	width: 40%;
+	height: 64px;
+	border: solid 1px #dedede;
+	padding: 8px 16px;
+	background-color: #f0f0f0;
+	margin-bottom: 24px;
+}
+
+
+article {
+	margin-bottom: 78px;
+	border-bottom: solid 2px #dedede;
+}
