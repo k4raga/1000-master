@@ -26,4 +26,8 @@ import "./js/begin25.js";
 import "./js/begin26.js";
 import "./js/begin27.js";
 import "./js/begin28.js";
+import "./js/begin29.js";
+import "./js/begin30.js";
+import "./js/begin31.js";
+import "./js/begin32.js";
 import "./js/doli.js";

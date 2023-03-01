@@ -3,6 +3,7 @@ module.exports = function (eleventyConfig) {
 	return {
 		dir: {
 			output: "1000.k4raga.site",
+			output: "_site",
 		},
 	};
 };

@@ -1,21 +1,27 @@
 {
-	"remotePath": "./domains/",
-	"host": "j71854176.myjino.ru",
-	"username": "j71854176_kira",
-	"password": "ls20th10",
-	"port": 21,
-	"secure": false,
-	"protocol": "ftp",
-	"uploadOnSave": false,
-	"passive": false,
-	"debug": false,
-	"privateKeyPath": null,
-	"passphrase": null,
-	"agent": null,
-	"allow": [],
-	"ignore": ["\\.vscode", "\\.git", "\\.DS_Store"],
-	"generatedFiles": {
-		"extensionsToInclude": [""],
-		"path": ""
-	}
+    "remotePath": "./domains/",
+    "host": "j71854176.myjino.ru",
+    "username": "j71854176_kira",
+    "password": "ls20th10",
+    "port": 21,
+    "secure": false,
+    "protocol": "ftp",
+    "uploadOnSave": false,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "agent": null,
+    "allow": [],
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store"
+    ],
+    "generatedFiles": {
+        "extensionsToInclude": [
+            ""
+        ],
+        "path": ""
+    }
 }
