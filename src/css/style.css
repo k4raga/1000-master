@@ -1,11 +1,11 @@
 @font-face {
 	font-family: Source-reg;
-	src: url("./src/fonts/SourceSansPro-Regular.ttf");
+	src: url("../fonts/SourceSansPro-Regular.ttf");
 }
 
 @font-face {
 	font-family: Source-bold;
-	src: url("./src/fonts/SourceSansPro-SemiBold.ttf");
+	src: url("../fonts/SourceSansPro-SemiBold.ttf");
 }
 
 body {
@@ -83,7 +83,7 @@ input[type=text] {
 
 .answer {
 	width: 40%;
-	height: 64px;
+	min-height: 64px;
 	border: solid 1px #dedede;
 	padding: 8px 16px;
 	background-color: #f0f0f0;

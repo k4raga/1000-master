@@ -1,7 +1,8 @@
-// import "./js/begin/beginSum.js"
-
-// import "./js/doli.js";
 if (window.location.pathname == "/") {
-    import "./js/Integer/integerSum.js"
+    let begin = await import("./js/begin/beginSum.js")
+    console.log("Тута")
 }
-// if (== )
+
+if (window.location.pathname == "/integer/") {
+    let integer = await import("./js/integer/integerSum.js")
+}
