@@ -93,5 +93,8 @@ input[type=text] {
 
 article {
 	margin-bottom: 78px;
-	border-bottom: solid 2px #dedede;
+}
+
+.line {
+	border: solid 1px #888;
 }
