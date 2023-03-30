@@ -12,8 +12,8 @@ class Task {
                     <h3>${this.descriptions}</h3>
                     <div class="input-wrap">
                         <div class="answer">Ответ: </div>
+                        <input class="button" type="button" value="Найти" />
                     </div>
-                    <input class="button" type="button" value="Найти" />
                 </article>
             <div class="line" ></div >`
     }
@@ -47,13 +47,13 @@ class Task {
 
 }
 
-function pastInput(className ,inputClass, placeholder) {
+function pastInput(className, inputClass, placeholder) {
     let input = className.createInput(inputClass, placeholder)
     className.inputWrap().insertAdjacentHTML('afterbegin', input)
 }
 
 function pastCard(className) {
-    container.innerHTML += className.createCard()
+    container.insertAdjacentHTML('beforeend', className.createCard())
 }
 
 

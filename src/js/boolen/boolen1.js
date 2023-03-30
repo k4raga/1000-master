@@ -1,5 +1,5 @@
 import { Task, pastInput, pastCard } from './boolenConst.js'
-{
+
     const task = new Task({
         num: '1',
         descriptions: `Дано  целое  число  A.  Проверить  истинность  высказывания:  «Число
@@ -9,19 +9,10 @@ import { Task, pastInput, pastCard } from './boolenConst.js'
     pastCard(task)
     pastInput(task, 'A', 'A')
 
-    console.log(document.querySelector('#boolen1'))
-
-    const btn = document.querySelector('#boolen1 .button')
-    console.log(document.querySelector('#boolen1 .button'))
 
 
-console.log(btn)
-
-
-btn.addEventListener('click', (evt) => {
-
-    console.log('123')
-
+task.btn().addEventListener('click', (evt) => {
+    const A = task.ID().querySelector('.A').value
+    let check = A > 0
+    task.answer().innerHTML += 'Положительное? ' + check + `</br>`
 })
-
-}
