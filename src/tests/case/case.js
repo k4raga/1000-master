@@ -267,15 +267,15 @@ const case9 = (Day, Mounth) => {
 				DM.push(1);
 				break;
 			default:
-				DM.push('Нет такого дня');
+				DM.push("Нет такого дня");
 		}
 	} else if (Day < 31) {
-		DM.push(Mounth)
-		DM.push(Day+1)
-		} else {
-			DM.push('нет такого дня')
-			DM.push("нет такого дня");
-		}
+		DM.push(Mounth);
+		DM.push(Day + 1);
+	} else {
+		DM.push("нет такого дня");
+		DM.push("нет такого дня");
+	}
 
 	if (Day == 30) {
 		switch (Mounth) {
@@ -296,24 +296,198 @@ const case9 = (Day, Mounth) => {
 		DM.push("нет такого дня");
 		DM.push("нет такого дня");
 	}
-		if (Day == 28) {
-			switch (Mounth) {
-				case 2:
-					DM.push(Mounth + 1);
-					DM.push(1);
-					break;
-				default:
-					"Нет такого дня";
-			}
-		} else if (Day < 28) {
-			DM.push(Mounth);
-			DM.push(Day + 1);
-		} else {
-			DM.push("нет такого дня");
-			DM.push("нет такого дня");
+	if (Day == 28) {
+		switch (Mounth) {
+			case 2:
+				DM.push(Mounth + 1);
+				DM.push(1);
+				break;
+			default:
+				"Нет такого дня";
 		}
+	} else if (Day < 28) {
+		DM.push(Mounth);
+		DM.push(Day + 1);
+	} else {
+		DM.push("нет такого дня");
+		DM.push("нет такого дня");
+	}
 
 	return DM;
 };
 
-export { case1, case2, case3, case4, case5, case6, case7, case8, case9 };
+const case10 = (direction, comand) => {
+	let res;
+	let north = "Север";
+	let south = "Юг";
+	let west = "Запад";
+	let east = "Восток";
+	switch (direction) {
+		case "С":
+		case "C":
+			switch (comand) {
+				case 0:
+					res = north;
+					break;
+				case 1:
+					res = west;
+					break;
+				case -1:
+					res = east;
+					break;
+			}
+			break;
+		case "З":
+			switch (comand) {
+				case 0:
+					res = west;
+					break;
+				case 1:
+					res = south;
+					break;
+				case -1:
+					res = north;
+					break;
+			}
+			break;
+		case "Ю":
+			switch (comand) {
+				case 0:
+					res = south;
+					break;
+				case 1:
+					res = east;
+					break;
+				case -1:
+					res = west;
+					break;
+			}
+			break;
+		case "З":
+			switch (comand) {
+				case 0:
+					res = east;
+					break;
+				case 1:
+					res = north;
+					break;
+				case -1:
+					res = south;
+					break;
+			}
+			break;
+		default:
+			res = " нет такого направления ";
+	}
+	return res;
+};
+
+const case11 = (direction, comand) => {
+	let res;
+	let north = "С";
+	let south = "Ю";
+	let west = "З";
+	let east = "В";
+	switch (direction) {
+		case "С":
+		case "C":
+			switch (comand) {
+				case 1:
+					res = west;
+					break;
+				case -1:
+					res = east;
+					break;
+				case 2:
+					res = south;
+					break;
+			}
+			break;
+		case "З":
+			switch (comand) {
+				case 1:
+					res = south;
+					break;
+				case -1:
+					res = north;
+					break;
+				case 2:
+					res = east;
+					break;
+			}
+			break;
+		case "Ю":
+			switch (comand) {
+				case 1:
+					res = east;
+					break;
+				case -1:
+					res = west;
+					break;
+				case 2:
+					res = north;
+					break;
+			}
+			break;
+		case "З":
+			switch (comand) {
+				case 1:
+					res = north;
+					break;
+				case -1:
+					res = south;
+					break;
+				case 2:
+					res = west;
+					break;
+			}
+			break;
+		default:
+			res = " нет такого направления ";
+	}
+	return res;
+};
+
+const case12 = (comand, num) => {
+	let a;
+	let R1;
+	let R2;
+	let S;
+	let agregator = (a, R1, R2, S) => {
+		let res = {};
+		res["a"] = a;
+		res["R1"] = R1;
+		res["R2"] = R2;
+		res["S"] = S.toFixed(3);
+		return res;
+	};
+	switch (comand) {
+		case 1:
+			a = num;
+			R1 = Math.round((num * Math.sqrt(3)) / 6, 2);
+			R2 = 2 * R1;
+			S = (num ** 2 * Math.sqrt(3)) / 4;
+			break;
+		case 2:
+			a = (num * 6) / Math.sqrt(3);
+			R1 = num;
+			R2 = 2 * num;
+			S = (num ** 2 * Math.sqrt(3)) / 4;
+		case 3:
+			a = (R1 * 6) / Math.sqrt(3);
+			R1 = R2 / 2;
+			R2 = num;
+			S = (num ** 2 * Math.sqrt(3)) / 4;
+		case 4:
+			a = Math.sqrt(((4*num)/Math.sqrt(3)))
+			R1 = Math.round((a * Math.sqrt(3)) / 6, 2);
+			R2 = 2 * R1;
+			S = num
+		default:
+			"ноу";
+	}
+	return agregator(a, R1, R2, S);
+};
+
+
+export { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, case11, case12 };

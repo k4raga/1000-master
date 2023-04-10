@@ -1,5 +1,5 @@
 import { Task, pastInput, pastCard } from "./caseConstr.js";
-import { case1, case2, case3, case4, case5, case6, case7, case8, case9 } from "../../tests/case/case.js";
+import { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, case11, case12 } from "../../tests/case/case.js";
 
 {
 	const task = new Task({
@@ -18,7 +18,6 @@ import { case1, case2, case3, case4, case5, case6, case7, case8, case9 } from ".
 		task.answer().innerHTML += `</br>` + case1(A);
 	});
 }
-
 
 {
 	const task = new Task({
@@ -75,7 +74,6 @@ import { case1, case2, case3, case4, case5, case6, case7, case8, case9 } from ".
 	});
 }
 
-
 {
 	const task = new Task({
 		num: "5",
@@ -86,13 +84,13 @@ import { case1, case2, case3, case4, case5, case6, case7, case8, case9 } from ".
 
 	pastCard(task);
 	pastInput(task, "operation", "operation");
-    pastInput(task, "B", "B");
-    pastInput(task, "A", "A");
+	pastInput(task, "B", "B");
+	pastInput(task, "A", "A");
 
 	task.btn().addEventListener("click", (evt) => {
 		const A = Number(task.ID().querySelector(".A").value);
-        const B = Number(task.ID().querySelector(".B").value);
-        const operation = Number(task.ID().querySelector(".operation").value);
+		const B = Number(task.ID().querySelector(".B").value);
+		const operation = Number(task.ID().querySelector(".operation").value);
 
 		task.answer().innerHTML += `</br>` + case5(operation, A, B);
 	});
@@ -154,7 +152,7 @@ import { case1, case2, case3, case4, case5, case6, case7, case8, case9 } from ".
 		const Day = Number(task.ID().querySelector(".Day").value);
 		const Mounth = Number(task.ID().querySelector(".Mounth").value);
 
-		task.answer().innerHTML += `</br>` + 'Месяц '+ case8(Day, Mounth)[0] + ' День ' + case8(Day, Mounth)[1];
+		task.answer().innerHTML += `</br>` + "Месяц " + case8(Day, Mounth)[0] + " День " + case8(Day, Mounth)[1];
 	});
 }
 
@@ -173,5 +171,75 @@ import { case1, case2, case3, case4, case5, case6, case7, case8, case9 } from ".
 		const Mounth = Number(task.ID().querySelector(".Mounth").value);
 
 		task.answer().innerHTML += `</br>` + "Месяц " + case9(Day, Mounth)[0] + " День " + case9(Day, Mounth)[1];
+	});
+}
+
+{
+	const task = new Task({
+		num: "10",
+		descriptions: `Робот  может  перемещаться  в  четырех  направлениях  («С»  —  север,
+«З»  —  запад,  «Ю»  —  юг,  «В»  —  восток)  и  принимать  три  цифровые  ко-
+манды: 0 — продолжать движение, 1 — поворот налево, –1 — поворот на-
+право.  Дан  символ  C  —  исходное  направление  робота  и  целое  число  N  —
+посланная  ему  команда.  Вывести  направление  робота  после  выполнения
+полученной команды.   `,
+	});
+
+	pastCard(task);
+	pastInput(task, "direction", "direction");
+	pastInput(task, "comand", "comand");
+
+	task.btn().addEventListener("click", (evt) => {
+		const direction = task.ID().querySelector(".direction").value;
+		const comand = Number(task.ID().querySelector(".comand").value);
+
+		task.answer().innerHTML += `</br>` + "Направление робота " + case10(direction, comand);
+	});
+}
+
+{
+	const task = new Task({
+		num: "11",
+		descriptions: `Локатор  ориентирован  на  одну  из  сторон  света  («С»  —  север,  «З»  —запад,  «Ю»  —  юг,  «В»  —  восток)  и  может  принимать  три  цифровые  ко-
+манды поворота: 1 — поворот налево, –1 — поворот направо, 2 — поворот
+на 180°. Дан символ C — исходная ориентация локатора и целые числа N1
+и  N2  —  две  посланные  команды.  Вывести  ориентацию  локатора  после
+выполнения этих команд.    `,
+	});
+
+	pastCard(task);
+	pastInput(task, "direction", "direction");
+	pastInput(task, "comand", "comand");
+	pastInput(task, "comand2", "comand2");
+
+	task.btn().addEventListener("click", (evt) => {
+		const direction = task.ID().querySelector(".direction").value;
+		const comand = Number(task.ID().querySelector(".comand").value);
+		const comand2 = Number(task.ID().querySelector(".comand2").value);
+
+		task.answer().innerHTML += `</br>` + "Направление робота " + case11(case11(direction, comand), comand2);
+	});
+}
+
+{
+	const task = new Task({
+		num: "12",
+		descriptions: `Элементы равностороннего треугольника пронумерованы следующим
+образом:  1  —  сторона  a,  2  —  радиус  R1  вписанной  окружности  ( R1 =
+= 3 / 6 a ), 3 — радиус R2 описанной окружности (R2 = 2·R1), 4 — площадь
+S = 2 3 / a 4 . Дан номер одного из этих элементов и его значение. Вывести
+значения остальных элементов данного треугольника (в том же порядке).     `,
+	});
+
+	pastCard(task);
+	pastInput(task, "a", "a");
+	pastInput(task, "comand", "comand");
+
+	task.btn().addEventListener("click", (evt) => {
+		const comand = Number(task.ID().querySelector(".comand").value);
+		const a = Number(task.ID().querySelector(".a").value);
+
+		Object.entries(case12(comand, a)).forEach(([key, values]) => (task.answer().innerHTML += `</br>` + key + ' - ' + values));
+
 	});
 }
