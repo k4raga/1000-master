@@ -479,15 +479,96 @@ const case12 = (comand, num) => {
 			R2 = num;
 			S = (num ** 2 * Math.sqrt(3)) / 4;
 		case 4:
-			a = Math.sqrt(((4*num)/Math.sqrt(3)))
+			a = Math.sqrt((4 * num) / Math.sqrt(3));
 			R1 = Math.round((a * Math.sqrt(3)) / 6, 2);
 			R2 = 2 * R1;
-			S = num
+			S = num;
 		default:
 			"ноу";
 	}
 	return agregator(a, R1, R2, S);
 };
 
+const case13 = (comand, num) => {
+	let a;
+	let c;
+	let h;
+	let S;
+	let agregator = (a, c, h, S) => {
+		let res = {};
+		res["a"] = a.toFixed(3);
+		res["c"] = c.toFixed(3);
+		res["h"] = h.toFixed(3);
+		res["S"] = S.toFixed(3);
+		return res;
+	};
+	switch (comand) {
+		case 1:
+			a = num;
+			c = a * Math.sqrt(2);
+			h = c / 2;
+			S = (c * h) / 2;
+			break;
+		case 2:
+			c = num;
+			a = c / Math.sqrt(2);
+			h = c / 2;
+			S = (c * h) / 2;
+		case 3:
+			h = num;
+			a = c / Math.sqrt(2);
+			c = h * 2;
+			S = (c * h) / 2;
+		case 4:
+			S = num;
+			a = c / Math.sqrt(2);
+			c = h * 2;
+			h = Math.sqrt(S);
+		default:
+			"ноу";
+	}
+	return agregator(a, c, h, S);
+};
 
-export { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, case11, case12 };
+const case14 = (comand, num) => {
+	let a;
+	let R1;
+	let R2;
+	let S;
+	let agregator = (a, R1, R2, S) => {
+		let res = {};
+		res["a"] = a.toFixed(3);
+		res["R1"] = R1.toFixed(3);
+		res["R2"] = R2.toFixed(3);
+		res["S"] = S.toFixed(3);
+		return res;
+	};
+	switch (comand) {
+		case 1:
+			a = num;
+			R1 = (a * Math.sqrt(3)) / 6;
+			R2 = 2 * R1;
+			S = (Math.pow(a, 2) * Math.sqrt(3)) / 4;
+			break;
+		case 2:
+			R1 = num;
+			a = (6 * R1) / Math.sqrt(3);
+			R2 = 2 * R1;
+			S = (Math.pow(a) * Math.sqrt(3)) / 4;
+		case 3:
+			R2 = num;
+			R1 = R2 / 2;
+			a = (6 * R1) / Math.sqrt(3);
+			S = (Math.pow(a) * Math.sqrt(3)) / 4;
+		case 4:
+			S = num;
+			a = Math.sqrt((4 * S) / Math.sqrt(3));
+			R1 = (a * Math.sqrt(3)) / 6;
+			R2 = +R1 / 2;
+		default:
+			"ноу";
+	}
+	return agregator(a, R1, R2, S);
+};
+
+export { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, case11, case12, case13, case14 };

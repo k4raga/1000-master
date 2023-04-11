@@ -1,5 +1,5 @@
 import { Task, pastInput, pastCard } from "./caseConstr.js";
-import { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, case11, case12 } from "../../tests/case/case.js";
+import { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, case11, case12, case13, case14 } from "../../tests/case/case.js";
 
 {
 	const task = new Task({
@@ -241,5 +241,49 @@ S = 2 3 / a 4 . Дан номер одного из этих элементов 
 
 		Object.entries(case12(comand, a)).forEach(([key, values]) => (task.answer().innerHTML += `</br>` + key + ' - ' + values));
 
+	});
+}
+
+{
+	const task = new Task({
+		num: "13",
+		descriptions: ` Элементы равнобедренного прямоугольного треугольника пронумеро-
+ваны следующим образом: 1 — катет a, 2 — гипотенуза c = 2a , 3 — вы-
+сота  h,  опущенная  на  гипотенузу  ( h = c/2),  4  —  площадь  S = c·h/2.  Дан  но-
+мер одного из этих элементов и его значение. Вывести значения остальных
+элементов данного треугольника (в том же порядке).      `,
+	});
+
+	pastCard(task);
+	pastInput(task, "a", "a");
+	pastInput(task, "comand", "comand");
+
+	task.btn().addEventListener("click", (evt) => {
+		const comand = Number(task.ID().querySelector(".comand").value);
+		const a = Number(task.ID().querySelector(".a").value);
+
+		Object.entries(case13(comand, a)).forEach(([key, values]) => (task.answer().innerHTML += `</br>` + key + " - " + values));
+	});
+}
+
+{
+	const task = new Task({
+		num: "14",
+		descriptions: ` Элементы равностороннего треугольника пронумерованы следующим
+образом:  1  —  сторона  a,  2  —  радиус  R1  вписанной  окружности  ( R1 =
+= 3 / 6 a ), 3 — радиус R2 описанной окружности (R2 = 2·R1), 4 — площадь
+S = 2 3 / a 4 . Дан номер одного из этих элементов и его значение. Вывести
+значения остальных элементов данного треугольника (в том же порядке)      `,
+	});
+
+	pastCard(task);
+	pastInput(task, "a", "a");
+	pastInput(task, "comand", "comand");
+
+	task.btn().addEventListener("click", (evt) => {
+		const comand = Number(task.ID().querySelector(".comand").value);
+		const a = Number(task.ID().querySelector(".a").value);
+
+		Object.entries(case14(comand, a)).forEach(([key, values]) => (task.answer().innerHTML += `</br>` + key + " - " + values));
 	});
 }
