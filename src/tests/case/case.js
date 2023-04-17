@@ -571,4 +571,508 @@ const case14 = (comand, num) => {
 	return agregator(a, R1, R2, S);
 };
 
-export { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, case11, case12, case13, case14 };
+const case15 = (num, suit) => {
+	let res;
+	switch (num) {
+		case 6:
+			res = "шестерка ";
+			switch (suit) {
+				case 1:
+					res += "пики";
+					break;
+				case 2:
+					res += "трефы";
+					break;
+				case 3:
+					res += "бубны";
+					break;
+				case 4:
+					res += "червы";
+					break;
+			}
+			break;
+		case 7:
+			res = "семерка ";
+			switch (suit) {
+				case 1:
+					res += "пики";
+					break;
+				case 2:
+					res += "трефы";
+					break;
+				case 3:
+					res += "бубны";
+					break;
+				case 4:
+					res += "червы";
+					break;
+			}
+			break;
+		case 8:
+			res = "восьмерка ";
+			switch (suit) {
+				case 1:
+					res += "пики";
+					break;
+				case 2:
+					res += "трефы";
+					break;
+				case 3:
+					res += "бубны";
+					break;
+				case 4:
+					res += "червы";
+					break;
+			}
+			break;
+		case 9:
+			res = "девятка ";
+			switch (suit) {
+				case 1:
+					res += "пики";
+					break;
+				case 2:
+					res += "трефы";
+					break;
+				case 3:
+					res += "бубны";
+					break;
+				case 4:
+					res += "червы";
+					break;
+			}
+			break;
+		case 10:
+			res = "десятка ";
+			switch (suit) {
+				case 1:
+					res += "пики";
+					break;
+				case 2:
+					res += "трефы";
+					break;
+				case 3:
+					res += "бубны";
+					break;
+				case 4:
+					res += "червы";
+					break;
+			}
+			break;
+		case 11:
+			res = "валет ";
+			switch (suit) {
+				case 1:
+					res += "пики";
+					break;
+				case 2:
+					res += "трефы";
+					break;
+				case 3:
+					res += "бубны";
+					break;
+				case 4:
+					res += "червы";
+					break;
+			}
+			break;
+		case 12:
+			res = "дама ";
+			switch (suit) {
+				case 1:
+					res += "пики";
+					break;
+				case 2:
+					res += "трефы";
+					break;
+				case 3:
+					res += "бубны";
+					break;
+				case 4:
+					res += "червы";
+					break;
+			}
+			break;
+		case 13:
+			res = "король ";
+			switch (suit) {
+				case 1:
+					res += "пики";
+					break;
+				case 2:
+					res += "трефы";
+					break;
+				case 3:
+					res += "бубны";
+					break;
+				case 4:
+					res += "червы";
+					break;
+			}
+			break;
+		case 14:
+			res = "туз ";
+			switch (suit) {
+				case 1:
+					res += "пики";
+					break;
+				case 2:
+					res += "трефы";
+					break;
+				case 3:
+					res += "бубны";
+					break;
+				case 4:
+					res += "червы";
+					break;
+			}
+			break;
+		default:
+			"ноу";
+	}
+	return res;
+};
+
+let case16 = (age) => {
+	let res;
+	switch (age) {
+		case 20:
+		case 25:
+		case 26:
+		case 27:
+		case 28:
+		case 29:
+		case 30:
+		case 35:
+		case 36:
+		case 37:
+		case 38:
+		case 39:
+		case 40:
+		case 45:
+		case 46:
+		case 47:
+		case 48:
+		case 49:
+		case 50:
+		case 55:
+		case 56:
+		case 57:
+		case 58:
+		case 59:
+		case 60:
+		case 65:
+		case 66:
+		case 67:
+		case 68:
+		case 69:
+			res = age + " лет";
+			break;
+		case 21:
+		case 31:
+		case 41:
+		case 51:
+		case 61:
+			res = age + " год";
+			break;
+		case 22:
+		case 23:
+		case 24:
+		case 32:
+		case 33:
+		case 34:
+		case 42:
+		case 43:
+		case 44:
+		case 52:
+		case 53:
+		case 54:
+		case 62:
+		case 63:
+		case 64:
+			res = age + "года";
+			break;
+	}
+	return res;
+};
+
+let case17 = (learnTask) => {
+	let res;
+	let firstNum = Math.floor(learnTask / 10);
+	let lastNum = learnTask % 10;
+
+	switch (firstNum) {
+		case 1:
+			switch (lastNum) {
+				case 0:
+					res += "десять ";
+					break;
+				case 1:
+					res += "одиннадцать ";
+					break;
+				case 2:
+					res += "двенадцать ";
+					break;
+				case 3:
+					res += "тринадцать ";
+					break;
+				case 4:
+					res += "четырнадцать ";
+					break;
+				case 15:
+					res += "пятнадцать ";
+					break;
+				case 16:
+					res += "шестнадцать ";
+					break;
+				case 17:
+					res += "семнадцать ";
+					break;
+				case 18:
+					res += "восемнадцать ";
+					break;
+				case 19:
+					res += "девятнадцать ";
+					break;
+			}
+		case 2:
+			res = "двадцать ";
+			switch (lastNum) {
+				case 1:
+					res += "один ";
+					break;
+				case 2:
+					res += "два ";
+					break;
+				case 3:
+					res += "три ";
+					break;
+				case 4:
+					res += "четыре ";
+					break;
+				case 5:
+					res += "пять ";
+					break;
+				case 6:
+					res += "шесть ";
+					break;
+				case 7:
+					res += "семь ";
+					break;
+				case 8:
+					res += "восемь ";
+					break;
+				case 9:
+					res += "девять ";
+					break;
+			}
+			break;
+		case 3:
+			res = "тридцать ";
+			switch (lastNum) {
+				case 1:
+					res += "одно ";
+					break;
+				case 2:
+					res += "два ";
+					break;
+				case 3:
+					res += "три ";
+					break;
+				case 4:
+					res += "четыре ";
+					break;
+				case 5:
+					res += "пять ";
+					break;
+				case 6:
+					res += "шесть ";
+					break;
+				case 7:
+					res += "семь ";
+					break;
+				case 8:
+					res += "восемь ";
+					break;
+				case 9:
+					res += "девять ";
+					break;
+			}
+			break;
+		case 4:
+			res = "сорок ";
+			break;
+	}
+	switch (learnTask) {
+		case 10:
+		case 11:
+		case 12:
+		case 13:
+		case 14:
+		case 15:
+		case 16:
+		case 17:
+		case 18:
+		case 20:
+		case 25:
+		case 26:
+		case 27:
+		case 28:
+		case 29:
+		case 35:
+		case 36:
+		case 37:
+		case 38:
+		case 39:
+			res += "учебных заданий";
+			break;
+		case 21:
+		case 31:
+			res += "учебное задание";
+			break;
+		case 22:
+		case 23:
+		case 24:
+		case 32:
+		case 33:
+		case 34:
+			res += "учебных задания";
+			break;
+	}
+	return res;
+};
+
+let case18 = (num) => {
+	let res ='';
+	let firstNumber = Math.floor(num / 100);
+	let secondNumber = Math.floor(num / 10) % 10;
+	let lastNumber = num % 10;
+	switch (firstNumber) {
+		case 1:
+			res += "Сто ";
+			break;
+		case 2:
+			res += "Двести ";
+			break;
+		case 3:
+			res += "Триста ";
+			break;
+		case 4:
+			res += "Четыреста ";
+			break;
+		case 5:
+			res += "Пятьсот ";
+			break;
+		case 6:
+			res += "Шестьсот ";
+			break;
+		case 7:
+			res += "Семьсот ";
+			break;
+		case 8:
+			res += "Восемьсот ";
+		case 9:
+			res += "Девятьсот ";
+		default:
+			break;
+	}
+	switch ((secondNumber)) {
+		case 0:
+			break;
+		case 1:
+			switch (lastNumber) {
+				case 0:
+					res += "десять";
+					break;
+				case 1:
+					res += "одиннадцать";
+					break;
+				case 2:
+					res += "двенадцать";
+					break;
+				case 3:
+					res += "тринадцать";
+					break;
+				case 4:
+					res += "четырнадцать";
+					break;
+				case 5:
+					res += "пятнадцать";
+					break;
+				case 6:
+					res += "шестнадцать";
+					break;
+				case 7:
+					res += "семнадцать";
+					break;
+				case 8:
+					res += "восемнадцать";
+					break;
+				case 10:
+					res += "девятнадцать";
+					break;
+			}
+			break;
+		case 2:
+			res += "двадцать ";
+			break;
+		case 3:
+			res += "тридцать ";
+			break;
+		case 4:
+			res += "сорок ";
+			break;
+		case 5:
+			res += "пятьдесят ";
+			break;
+		case 6:
+			res += "шестьдесят ";
+			break;
+		case 7:
+			res += "семьдесят ";
+			break;
+		case 8:
+			res += "весьмьдесят ";
+		case 9:
+			res += "девяносто ";
+		default:
+			break;
+	}
+	if (secondNumber != 1) {
+		switch ((lastNumber)) {
+			case 0:
+				break;
+			case 1:
+				res += "один";
+				break;
+			case 2:
+				res += "два";
+				break;
+			case 3:
+				res += "три";
+				break;
+			case 4:
+				res += "четыре";
+				break;
+			case 5:
+				res += "пять";
+				break;
+			case 6:
+				res += "шесть";
+				break;
+			case 7:
+				res += "семь";
+				break;
+			case 8:
+				res += "восемь";
+				break;
+			case 9:
+				res += "девять";
+				break;
+		}
+	} else {
+		return res;
+	}
+	return res;
+};
+export { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, case11, case12, case13, case14, case15, case16, case17, case18 };

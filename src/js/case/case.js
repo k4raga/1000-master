@@ -1,5 +1,24 @@
 import { Task, pastInput, pastCard } from "./caseConstr.js";
-import { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, case11, case12, case13, case14 } from "../../tests/case/case.js";
+import {
+	case1,
+	case2,
+	case3,
+	case4,
+	case5,
+	case6,
+	case7,
+	case8,
+	case9,
+	case10,
+	case11,
+	case12,
+	case13,
+	case14,
+	case15,
+	case16,
+	case17,
+	case18
+} from "../../tests/case/case.js";
 
 {
 	const task = new Task({
@@ -239,8 +258,7 @@ S = 2 3 / a 4 . Дан номер одного из этих элементов 
 		const comand = Number(task.ID().querySelector(".comand").value);
 		const a = Number(task.ID().querySelector(".a").value);
 
-		Object.entries(case12(comand, a)).forEach(([key, values]) => (task.answer().innerHTML += `</br>` + key + ' - ' + values));
-
+		Object.entries(case12(comand, a)).forEach(([key, values]) => (task.answer().innerHTML += `</br>` + key + " - " + values));
 	});
 }
 
@@ -285,5 +303,82 @@ S = 2 3 / a 4 . Дан номер одного из этих элементов 
 		const a = Number(task.ID().querySelector(".a").value);
 
 		Object.entries(case14(comand, a)).forEach(([key, values]) => (task.answer().innerHTML += `</br>` + key + " - " + values));
+	});
+}
+
+{
+	const task = new Task({
+		num: "15",
+		descriptions: ` Мастям  игральных  карт  присвоены  порядковые  номера:  1  —  пики,
+2  —  трефы,  3  —  бубны,  4  —  червы.  Достоинству  карт,  старших  десятки,
+присвоены  номера:  11  —  валет, 12 — дама, 13 — король, 14 — туз. Даны
+два  целых  числа:  N  —  достоинство  (6  ≤  N  ≤  14)  и  M  —  масть  карты
+(1 ≤ M ≤ 4). Вывести название соответствующей карты вида «шестерка бу-
+бен», «дама червей», «туз треф» и т. п.      `,
+	});
+
+	pastCard(task);
+	pastInput(task, "suit", "suit");
+	pastInput(task, "numb", "numb");
+
+	task.btn().addEventListener("click", (evt) => {
+		const suit = Number(task.ID().querySelector(".suit").value);
+		const numb = Number(task.ID().querySelector(".numb").value);
+		task.answer().innerHTML += `</br>` + case15(numb, suit);
+	});
+}
+
+{
+	const task = new Task({
+		num: "16",
+		descriptions: ` Дано целое число в диапазоне 20–69, определяющее возраст (в годах).
+Вывести  строку-описание  указанного  возраста,  обеспечив  правильное  со-
+гласование  числа  со  словом  « год»,  например:  20  —  «двадцать  лет»,  32  —
+«тридцать два года», 41 — «сорок один год».       `,
+	});
+
+	pastCard(task);
+	pastInput(task, "age", "age");
+
+	task.btn().addEventListener("click", (evt) => {
+		const age = Number(task.ID().querySelector(".age").value);
+		task.answer().innerHTML += `</br>` + case16(age);
+	});
+}
+
+{
+	const task = new Task({
+		num: "17",
+		descriptions: `Дано целое число в диапазоне 10–40, определяющее количество учеб-
+ных  заданий  по  некоторой  теме.  Вывести  строку-описание  указанного  ко-
+личества  заданий,  обеспечив  правильное  согласование  числа  со  словами
+«учебное  задание»,  например:  18  —  «восемнадцать  учебных  заданий»,
+23  —  «двадцать  три  учебных  задания»,  31  —  «тридцать  одно  учебное  за-
+дание».       `,
+	});
+
+	pastCard(task);
+	pastInput(task, "learnTask", "learnTask");
+
+	task.btn().addEventListener("click", (evt) => {
+		const learnTask = Number(task.ID().querySelector(".learnTask").value);
+		task.answer().innerHTML += `</br>` + case17(learnTask);
+	});
+}
+
+{
+	const task = new Task({
+		num: "18",
+		descriptions: `Дано  целое  число  в  диапазоне  100–999.  Вывести  строку-описание
+					данного  числа,  например:  256  —  «двести  пятьдесят  шесть»,  814  —  «во-
+					семьсот четырнадцать». `,
+	});
+
+	pastCard(task);
+	pastInput(task, "num", "num");
+
+	task.btn().addEventListener("click", (evt) => {
+		const num = Number(task.ID().querySelector(".num").value);
+		task.answer().innerHTML += `</br>` + case18(num);
 	});
 }
