@@ -12,7 +12,7 @@ class Task {
                     <h2 class="title">${title}${this.num}</h2>
                     <h3>${this.descriptions}</h3>
                     <div class="input-wrap">
-                        <div class="answer">Ответ: </div>
+                        <div class="answer">Ответ: <div class="answerValue"></div></div>
                         <input class="button" type="button" value="Найти" />
                     </div>
                 </article>
@@ -30,7 +30,7 @@ class Task {
 
 	answer() {
 		let ID = document.querySelector("#" + title + String(this.num));
-		let answer = ID.querySelector(".answer");
+		let answer = ID.querySelector(".answerValue");
 		return answer;
 	}
 

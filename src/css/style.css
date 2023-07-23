@@ -47,7 +47,7 @@ h3 {
 	flex-direction: column;
 	gap: 24px;
 }
-input[type=text] {
+input[type="text"] {
 	height: 32px;
 	width: 40%;
 	background-color: #f1f1f1;
@@ -89,7 +89,6 @@ input[type=text] {
 	background-color: #f0f0f0;
 	margin-bottom: 24px;
 }
-
 
 article {
 	margin-bottom: 78px;
