@@ -127,4 +127,29 @@ function for13(N) {
 	}
 	return newA;
 }
-export { for1, for2, for3, for4, for5, for6, for7, for8, for9, for10, for11, for12, for13 };
+function for14(N) {
+	let arr = [];
+	for (let i = 1; i <= N; i++) {
+		let newI = 2 * i - 1;
+		arr.push(newI);
+		console.log(newI);
+	}
+	return arr;
+}
+function for15(A, N) {
+	let newA = 1;
+	for (let i = 1; i <= N; i++) {
+		newA = A * newA;
+	}
+	return newA;
+}
+function for16(A, N) {
+	let newA = 1;
+	let arr = [];
+	for (let i = 1; i <= N; i++) {
+		newA = A * newA;
+		arr.push(newA);
+	}
+	return arr;
+}
+export { for1, for2, for3, for4, for5, for6, for7, for8, for9, for10, for11, for12, for13, for14, for15, for16 };

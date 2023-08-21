@@ -1,5 +1,5 @@
 import { Task, pastInput, pastCard, title } from "./forConstructor.js";
-import { for1, for2, for3, for4, for5, for6, for7, for8, for9, for10, for11, for12, for13 } from "./forFun.js";
+import { for1, for2, for3, for4, for5, for6, for7, for8, for9, for10, for11, for12, for13, for14, for15, for16 } from "./forFun.js";
 {
 	const task = new Task({ num: "1", descriptions: `Даны целые числа K и N (N > 0). Вывести N раз число K.` });
 	pastCard(task);
@@ -206,5 +206,63 @@ N2 + (N + 1)2 + (N + 2)2 + . . . + (2·N)2
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
 		task.answer().innerHTML += for13(N) + `<br>`;
+	});
+}
+
+{
+	const task = new Task({
+		num: "14",
+		descriptions: `
+Дано целое число N (> 0). Найти квадрат данного числа, используя для его вычисления следующую формулу:
+N2 = 1 + 3 + 5 + . . . + (2·N − 1).
+После добавления к сумме каждого слагаемого выводить текущее значение суммы (в результате будут выведены квадраты всех целых чисел от 1 до N).
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		task.answer().innerHTML += for14(N) + `<br>`;
+	});
+}
+{
+	const task = new Task({
+		num: "15",
+		descriptions: `
+
+Дано вещественное число A и целое число N (> 0). Найти A в степени N:
+AN = A·A· . . . ·A
+(числа A перемножаются N раз).
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+	pastInput(task, "A", "A");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		const A = Number(task.ID().querySelector(".A").value);
+		task.answer().innerHTML += for15(A, N) + `<br>`;
+	});
+}
+{
+	const task = new Task({
+		num: "16",
+		descriptions: `
+Дано вещественное число A и целое число N (> 0). Используя один цикл, вывести все целые степени числа A от 1 до N.
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+	pastInput(task, "A", "A");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		const A = Number(task.ID().querySelector(".A").value);
+		task.answer().innerHTML += for16(A, N) + `<br>`;
 	});
 }
