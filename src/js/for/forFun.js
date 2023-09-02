@@ -152,4 +152,180 @@ function for16(A, N) {
 	}
 	return arr;
 }
-export { for1, for2, for3, for4, for5, for6, for7, for8, for9, for10, for11, for12, for13, for14, for15, for16 };
+
+function for17(A, N) {
+	let newA = 1;
+	let arr = [];
+	for (let i = 1; i <= N; i++) {
+		newA = A * newA;
+		arr.push(newA);
+	}
+	let res = arr.reduce((a, b) => a + b);
+	return res;
+}
+
+function for18(A, N) {
+	let newA = 1;
+	let res = 1;
+	let arr = [];
+	for (let i = 1; i <= N; i++) {
+		let oldA = newA;
+		newA = A * newA;
+
+		let minus = oldA - newA;
+		res = res + minus;
+	}
+	return res;
+}
+
+function for19(N) {
+	let newA = 1;
+	let res = 1;
+	let arr = [];
+	for (let i = 1; i <= N; i++) {
+		arr.push(i);
+		res = arr.reduce((a, b) => a * b);
+	}
+	return res;
+}
+function for20(N) {
+	let res = 0;
+	let res2 = 0;
+	let arr = [];
+	for (let i = 1; i <= N; i++) {
+		arr = [];
+		for (let c = 1; c <= i; c++) {
+			arr.push(c);
+			res = arr.reduce((a, b) => a * b);
+		}
+		res2 = res2 + res;
+	}
+	return res2;
+}
+
+function for21(N) {
+	let res = 0;
+	let res2 = 1;
+	let arr = [];
+	for (let i = 1; i <= N; i++) {
+		arr = [];
+		for (let c = 1; c <= i; c++) {
+			arr.push(c);
+			res = arr.reduce((a, b) => a * b);
+		}
+		res2 = 1 / res2 + 1 / res;
+	}
+	return res2;
+}
+
+function fact(num) {
+	let arr = [];
+	let res = 1;
+	for (let i = 1; i <= num; i++) {
+		arr.push(i);
+		res = arr.reduce((a, b) => a * b);
+	}
+	console.log(res);
+	return res;
+}
+function for22(X, N) {
+	// 1 + x/!1 + x^2/!2 + ... x^N/!N
+	let res = 1;
+	let res3 = 1;
+	let arr = [];
+	for (let i = 0; i <= N; i++) {
+		res = Math.pow(X, i) / fact(i);
+		arr.push(res);
+		res3 = arr.reduce((a, b) => a + b);
+	}
+	return res3;
+}
+//x-x^3/!3+x^5/!5-...((-1)^N)*x^(2*N+1)/(2*N+1)!
+function for23(X, N) {
+	let arr = [];
+	let res2 = X;
+	function denominator(N) {
+		let twice = 2 * N;
+		return fact(twice + 1);
+	}
+	function numerator(X, N) {
+		let sign = Math.pow(-1, N);
+		let twice = 2 * N;
+		return sign * Math.pow(X, twice + 1);
+	}
+	for (let i = 0; i <= N; i++) {
+		let res = numerator(X, i) / denominator(i);
+		arr.push(res);
+		res2 = arr.reduce((a, b) => a + b);
+	}
+	return res2;
+}
+function for24(X, N) {
+	let arr = [];
+	let res2 = X;
+	function denominator(N) {
+		let twice = 2 * N;
+		return fact(twice);
+	}
+	function numerator(X, N) {
+		let sign = Math.pow(-1, N);
+		let twice = 2 * N;
+		return sign * Math.pow(X, twice);
+	}
+	for (let i = 0; i <= N; i++) {
+		let res = numerator(X, i) / denominator(i);
+		arr.push(res);
+		res2 = arr.reduce((a, b) => a + b);
+	}
+	return res2;
+}
+function for25(X, N) {
+	let arr = [];
+	let res2 = X;
+	for (let i = 1; i <= N; i++) {
+		let sign = Math.pow(-1, i - 1);
+		let res = (sign * Math.pow(X, i)) / i;
+		arr.push(res);
+		res2 = arr.reduce((a, b) => a + b);
+	}
+	return res2;
+}
+function for26(X, N) {
+	let arr = [];
+	let res2 = X;
+	for (let i = 1; i <= N; i++) {
+		let sign = Math.pow(-1, i - 1);
+		let res = (sign * Math.pow(X, i)) / i;
+		arr.push(res);
+		res2 = arr.reduce((a, b) => a + b);
+	}
+	return res2;
+}
+export {
+	for1,
+	for2,
+	for3,
+	for4,
+	for5,
+	for6,
+	for7,
+	for8,
+	for9,
+	for10,
+	for11,
+	for12,
+	for13,
+	for14,
+	for15,
+	for16,
+	for17,
+	for18,
+	for19,
+	for20,
+	for21,
+	for22,
+	for23,
+	for24,
+	for25,
+	for26,
+};

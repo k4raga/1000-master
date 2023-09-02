@@ -1,5 +1,32 @@
 import { Task, pastInput, pastCard, title } from "./forConstructor.js";
-import { for1, for2, for3, for4, for5, for6, for7, for8, for9, for10, for11, for12, for13, for14, for15, for16 } from "./forFun.js";
+import {
+	for1,
+	for2,
+	for3,
+	for4,
+	for5,
+	for6,
+	for7,
+	for8,
+	for9,
+	for10,
+	for11,
+	for12,
+	for13,
+	for14,
+	for15,
+	for16,
+	for17,
+	for18,
+	for19,
+	for20,
+	for21,
+	for22,
+	for23,
+	for24,
+	for25,
+	for26,
+} from "./forFun.js";
 {
 	const task = new Task({ num: "1", descriptions: `Даны целые числа K и N (N > 0). Вывести N раз число K.` });
 	pastCard(task);
@@ -264,5 +291,224 @@ AN = A·A· . . . ·A
 		const N = Number(task.ID().querySelector(".N").value);
 		const A = Number(task.ID().querySelector(".A").value);
 		task.answer().innerHTML += for16(A, N) + `<br>`;
+	});
+}
+{
+	const task = new Task({
+		num: "17",
+		descriptions: `
+
+Дано вещественное число A и целое число N (> 0). Используя один цикл, найти сумму
+1 + A + A2 + A3 + . . . + AN .
+
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+	pastInput(task, "A", "A");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		const A = Number(task.ID().querySelector(".A").value);
+		task.answer().innerHTML += for17(A, N) + `<br>`;
+	});
+}
+{
+	const task = new Task({
+		num: "18",
+		descriptions: `
+
+Дано вещественное число A и целое число N (> 0). Используя один цикл, найти значение выражения
+1 − A + A2 − A3 + . . . + (−1)N ·AN .
+Условный оператор не использовать.
+
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+	pastInput(task, "A", "A");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		const A = Number(task.ID().querySelector(".A").value);
+		task.answer().innerHTML += for18(A, N) + `<br>`;
+	});
+}
+{
+	const task = new Task({
+		num: "19",
+		descriptions: `
+
+Дано целое число N (> 0). Найти произведение
+N! = 1·2·. . .·N (N–факториал).
+Чтобы избежать целочисленного переполнения, вычислять это произведение с помощью вещественной переменной и вывести его как вещественное число.
+
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		task.answer().innerHTML += for19(N) + `<br>`;
+	});
+}
+{
+	const task = new Task({
+		num: "20",
+		descriptions: `
+
+Дано целое число N (> 0). Используя один цикл, найти сумму
+1! + 2! + 3! + . . . + N!
+(выражение N! — N–факториал — обозначает произведение всех целых чисел от 1 до N: N! = 1·2·. . .·N). Чтобы избежать целочисленного переполнения, проводить вычисления с помощью вещественных переменных и вывести результат как вещественное число.
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		task.answer().innerHTML += for20(N) + `<br>`;
+	});
+}
+{
+	const task = new Task({
+		num: "21",
+		descriptions: `
+
+Дано целое число N (> 0). Используя один цикл, найти сумму
+1 + 1/(1!) + 1/(2!) + 1/(3!) + . . . + 1/(N!)
+(выражение N! — N–факториал — обозначает произведение всех целых чисел от 1 до N: N! = 1·2·. . .·N). Полученное число является приближенным значением константы e = exp(1).
+
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		task.answer().innerHTML += for21(N) + `<br>`;
+	});
+}
+{
+	const task = new Task({
+		num: "22",
+		descriptions: `
+
+
+Дано вещественное число X и целое число N (> 0). Найти значение выражения
+1 + X + X 2/(2!) + . . . + X N /(N!)
+(N! = 1·2·. . .·N). Полученное число является приближенным значением функции exp в точке X.
+
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+	pastInput(task, "X", "X");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		const X = Number(task.ID().querySelector(".X").value);
+		task.answer().innerHTML += for22(X, N) + `<br>`;
+	});
+}
+{
+	const task = new Task({
+		num: "23",
+		descriptions: `
+
+
+Дано вещественное число X и целое число N (> 0). Найти значение выражения
+X − X 3/(3!) + X 5/(5!) − . . . + (−1)N ·X 2·N +1/((2·N+1)!)
+(N! = 1·2·. . .·N). Полученное число является приближенным значением функции sin в точке X.
+
+
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+	pastInput(task, "X", "X");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		const X = Number(task.ID().querySelector(".X").value);
+		task.answer().innerHTML += for23(X, N) + `<br>`;
+	});
+}
+{
+	const task = new Task({
+		num: "24",
+		descriptions: `
+
+
+
+Дано вещественное число X и целое число N (> 0). Найти значение выражения
+1 − X 2/(2!) + X 4/(4!) − . . . + (−1)N ·X 2·N /((2·N)!)
+(N! = 1·2·. . .·N). Полученное число является приближенным значением функции cos в точке X.
+
+
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+	pastInput(task, "X", "X");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		const X = Number(task.ID().querySelector(".X").value);
+		task.answer().innerHTML += for24(X, N) + `<br>`;
+	});
+}
+{
+	const task = new Task({
+		num: "25",
+		descriptions: `
+
+
+Дано вещественное число X (|X | < 1) и целое число N (> 0). Найти значение выражения
+X − X 2/2 + X 3/3 − . . . + (−1)N −1·X N /N.
+Полученное число является приближенным значением функции ln в точке 1 + X.
+
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+	pastInput(task, "X", "X");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		const X = Number(task.ID().querySelector(".X").value);
+		task.answer().innerHTML += for25(X, N) + `<br>`;
+	});
+}
+{
+	const task = new Task({
+		num: "26",
+		descriptions: `
+
+Дано вещественное число X (|X | < 1) и целое число N (> 0). Найти значение выражения
+X − X 3/3 + X 5/5 − . . . + (−1)N ·X 2·N +1/(2·N+1).
+Полученное число является приближенным значением функции arctg в точке X.
+
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+	pastInput(task, "X", "X");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		const X = Number(task.ID().querySelector(".X").value);
+		task.answer().innerHTML += for26(X, N) + `<br>`;
 	});
 }
