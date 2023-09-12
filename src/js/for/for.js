@@ -26,6 +26,9 @@ import {
 	for24,
 	for25,
 	for26,
+	for30,
+	for31,
+	for32,
 } from "./forFun.js";
 {
 	const task = new Task({ num: "1", descriptions: `Даны целые числа K и N (N > 0). Вывести N раз число K.` });
@@ -496,7 +499,7 @@ X − X 2/2 + X 3/3 − . . . + (−1)N −1·X N /N.
 		descriptions: `
 
 Дано вещественное число X (|X | < 1) и целое число N (> 0). Найти значение выражения
-X − X 3/3 + X 5/5 − . . . + (−1)N ·X 2·N +1/(2·N+1).
+X − X ^3/3 + X^ 5/5 − . . . + (−1)N ·X 2·N +1/(2·N+1).
 Полученное число является приближенным значением функции arctg в точке X.
 
 `,
@@ -510,5 +513,60 @@ X − X 3/3 + X 5/5 − . . . + (−1)N ·X 2·N +1/(2·N+1).
 		const N = Number(task.ID().querySelector(".N").value);
 		const X = Number(task.ID().querySelector(".X").value);
 		task.answer().innerHTML += for26(X, N) + `<br>`;
+	});
+}
+{
+	const task = new Task({
+		num: "30",
+		descriptions: `
+Дано целое число (N>14) и две вещественные точки на числовой оси: A и B, A < B, отрезок A, B разбит на N равных отрезков, вывести H - длинну каждого отрезка, а так же f(x) = 1 - sin(x) в точках разбивающих отрезок [a,b]:f(a), f(a+h), f(a+2h), ... f(b)
+
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+	pastInput(task, "B", "B");
+	pastInput(task, "A", "A");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		const B = Number(task.ID().querySelector(".B").value);
+		const A = Number(task.ID().querySelector(".A").value);
+		task.answer().innerHTML += for30(N, B, A) + `<br>`;
+	});
+}
+{
+	const task = new Task({
+		num: "31",
+		descriptions: `
+Дано целое число N > 0, последовательность вещественных чисел A_K определяется следующим образом А0 = 2, Ak = 2+(1/Ak-1), k, 1,2,
+
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		task.answer().innerHTML += for31(N) + `<br>`;
+	});
+}
+{
+	const task = new Task({
+		num: "32",
+		descriptions: `
+Дано целое число N > 0, последовательность вещественных чисел A_K определяется следующим образом А0 = 1, Ak = ((Ak-1)+1)/k, k, 1,2,
+
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		task.answer().innerHTML += for32(N) + `<br>`;
 	});
 }

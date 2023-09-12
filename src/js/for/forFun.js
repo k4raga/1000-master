@@ -293,13 +293,47 @@ function for25(X, N) {
 function for26(X, N) {
 	let arr = [];
 	let res2 = X;
-	for (let i = 1; i <= N; i++) {
-		let sign = Math.pow(-1, i - 1);
-		let res = (sign * Math.pow(X, i)) / i;
-		arr.push(res);
-		res2 = arr.reduce((a, b) => a + b);
+	function numerator() {}
+}
+
+function for30(N, B, A) {
+	let arr = [];
+	if (N > 14) {
+		if (A < B) {
+			let diff = B - A;
+			let H = diff / N;
+			console.log(H);
+			function sinXMin(x) {
+				return 1 - Math.sin(x);
+			}
+			for (let i = 1; i <= N; i++) {
+				arr.push(sinXMin(A + H * i));
+			}
+		} else {
+			console.log("А должно быть меньше чем Б ");
+		}
+	} else {
+		console.log("число N меньше 14");
 	}
-	return res2;
+	return arr;
+}
+function for31(N) {
+	let arr = [2];
+	let lastRes = 2;
+	for (let i = 2; i <= N; i++) {
+		arr.push(2 + i / lastRes);
+		lastRes = arr[arr.length - 1];
+	}
+	return arr;
+}
+function for32(N) {
+	let arr = [1];
+	let lastRes = 1;
+	for (let i = 0; i <= N; i++) {
+		arr.push((lastRes + 1) / i);
+		lastRes = arr[arr.length - 1];
+	}
+	return arr;
 }
 export {
 	for1,
@@ -328,4 +362,7 @@ export {
 	for24,
 	for25,
 	for26,
+	for30,
+	for31,
+	for32,
 };
