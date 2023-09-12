@@ -1,16 +1,16 @@
-function for1(K, N) {
+export function for1(K, N) {
 	let answer = [];
 	if (N <= 0) {
 		alert("число должно быть больше нуля");
 	} else {
-		for (let i = 0; i <= N; i++) {
+		for (let i = 1; i <= N; i++) {
 			answer.push(K);
 		}
 	}
 	return answer;
 }
 
-function for2(A, B) {
+export function for2(A, B) {
 	let answer = [];
 	if (A > B) {
 		alert("A должно быть больше B");
@@ -21,7 +21,7 @@ function for2(A, B) {
 	}
 	return answer;
 }
-function for3(A, B) {
+export function for3(A, B) {
 	let answer = [];
 	if (A > B) {
 		alert("A должно быть больше B");
@@ -32,7 +32,7 @@ function for3(A, B) {
 	}
 	return answer;
 }
-function for4(price) {
+export function for4(price) {
 	let answer = [];
 	for (let i = 1; i <= 10; i++) {
 		let priceSum = i * price;
@@ -40,7 +40,7 @@ function for4(price) {
 	}
 	return answer;
 }
-function for5(price) {
+export function for5(price) {
 	let answer = [];
 	for (let i = 1; i <= 10; i++) {
 		let newI = i * 0.1;
@@ -49,7 +49,7 @@ function for5(price) {
 	}
 	return answer;
 }
-function for6(price) {
+export function for6(price) {
 	let answer = [];
 	for (let i = 10; i <= 20; i += 2) {
 		let newI = (i * 0.1).toFixed(1);
@@ -59,7 +59,7 @@ function for6(price) {
 	}
 	return answer;
 }
-function for7(A, B) {
+export function for7(A, B) {
 	let newA = 0;
 	if (B < A) {
 		alert("A больше Б, брооо");
@@ -70,7 +70,7 @@ function for7(A, B) {
 	}
 	return newA;
 }
-function for8(A, B) {
+export function for8(A, B) {
 	let newA = 1;
 	if (B < A) {
 		alert("A больше Б, брооо");
@@ -81,7 +81,7 @@ function for8(A, B) {
 	}
 	return newA;
 }
-function for9(A, B) {
+export function for9(A, B) {
 	let newA = 1;
 	if (B < A) {
 		alert("A больше Б, брооо");
@@ -93,7 +93,7 @@ function for9(A, B) {
 	}
 	return newA;
 }
-function for10(N) {
+export function for10(N) {
 	let newA = 0;
 	for (let i = 1; i <= N; i++) {
 		newA += 1 / i;
@@ -101,14 +101,14 @@ function for10(N) {
 	return newA;
 }
 
-function for11(N) {
+export function for11(N) {
 	let newA = 0;
 	for (let i = 1; i <= N; i++) {
 		newA = Math.pow(N, 2) + Math.pow(N + i, 2);
 	}
 	return newA;
 }
-function for12(N) {
+export function for12(N) {
 	let newA = 1;
 	for (let i = 1; i <= N; i++) {
 		let newI = 1 + i * 0.1;
@@ -117,7 +117,7 @@ function for12(N) {
 	return newA;
 }
 
-function for13(N) {
+export function for13(N) {
 	let newA = 0;
 	for (let i = 2; i <= N * 2; i += 2) {
 		let newI = 1 + i * 0.1;
@@ -127,7 +127,7 @@ function for13(N) {
 	}
 	return newA;
 }
-function for14(N) {
+export function for14(N) {
 	let arr = [];
 	for (let i = 1; i <= N; i++) {
 		let newI = 2 * i - 1;
@@ -136,14 +136,14 @@ function for14(N) {
 	}
 	return arr;
 }
-function for15(A, N) {
+export function for15(A, N) {
 	let newA = 1;
 	for (let i = 1; i <= N; i++) {
 		newA = A * newA;
 	}
 	return newA;
 }
-function for16(A, N) {
+export function for16(A, N) {
 	let newA = 1;
 	let arr = [];
 	for (let i = 1; i <= N; i++) {
@@ -153,7 +153,7 @@ function for16(A, N) {
 	return arr;
 }
 
-function for17(A, N) {
+export function for17(A, N) {
 	let newA = 1;
 	let arr = [];
 	for (let i = 1; i <= N; i++) {
@@ -164,7 +164,7 @@ function for17(A, N) {
 	return res;
 }
 
-function for18(A, N) {
+export function for18(A, N) {
 	let newA = 1;
 	let res = 1;
 	let arr = [];
@@ -178,7 +178,7 @@ function for18(A, N) {
 	return res;
 }
 
-function for19(N) {
+export function for19(N) {
 	let newA = 1;
 	let res = 1;
 	let arr = [];
@@ -188,7 +188,7 @@ function for19(N) {
 	}
 	return res;
 }
-function for20(N) {
+export function for20(N) {
 	let res = 0;
 	let res2 = 0;
 	let arr = [];
@@ -203,7 +203,7 @@ function for20(N) {
 	return res2;
 }
 
-function for21(N) {
+export function for21(N) {
 	let res = 0;
 	let res2 = 1;
 	let arr = [];
@@ -218,7 +218,7 @@ function for21(N) {
 	return res2;
 }
 
-function fact(num) {
+export function fact(num) {
 	let arr = [];
 	let res = 1;
 	for (let i = 1; i <= num; i++) {
@@ -228,7 +228,7 @@ function fact(num) {
 	console.log(res);
 	return res;
 }
-function for22(X, N) {
+export function for22(X, N) {
 	// 1 + x/!1 + x^2/!2 + ... x^N/!N
 	let res = 1;
 	let res3 = 1;
@@ -241,7 +241,7 @@ function for22(X, N) {
 	return res3;
 }
 //x-x^3/!3+x^5/!5-...((-1)^N)*x^(2*N+1)/(2*N+1)!
-function for23(X, N) {
+export function for23(X, N) {
 	let arr = [];
 	let res2 = X;
 	function denominator(N) {
@@ -260,7 +260,7 @@ function for23(X, N) {
 	}
 	return res2;
 }
-function for24(X, N) {
+export function for24(X, N) {
 	let arr = [];
 	let res2 = X;
 	function denominator(N) {
@@ -279,7 +279,7 @@ function for24(X, N) {
 	}
 	return res2;
 }
-function for25(X, N) {
+export function for25(X, N) {
 	let arr = [];
 	let res2 = X;
 	for (let i = 1; i <= N; i++) {
@@ -290,13 +290,76 @@ function for25(X, N) {
 	}
 	return res2;
 }
-function for26(X, N) {
-	let arr = [];
-	let res2 = X;
+export function for26(X, N) {
+	//X — X^3/3 + X^5/5 -…+ (-1)^N*X^(2*N+1)/(2*N+1).
+	let arr = [X];
 	function numerator() {}
+	for (let i = 1; i <= N; i++) {
+		let arc = 2 * i + 1;
+		let exp = (Math.pow(-1, i) * Math.pow(X, arc)) / arc;
+		arr.push(exp);
+	}
+	return arr.reduce((a, b) => a + b);
+}
+export function for27(X, N) {
+	//X — X^3/3 + X^5/5 -…+ (-1)^N*X^(2*N-1)/(2*N-1).
+	let arr = [X];
+	function numerator() {}
+	for (let i = 1; i <= N; i++) {
+		let arc = 2 * i + 1;
+		let exp = (Math.pow(-1, i) * Math.pow(X, arc)) / arc;
+		arr.push(exp);
+	}
+	return arr.reduce((a, b) => a + b);
 }
 
-function for30(N, B, A) {
+export function for28(X, N) {
+	let arr = [];
+	function progression(n) {
+		let arrProgression = [];
+		for (let i = 1; i <= n; i++) {
+			arrProgression.push(i * 2);
+		}
+		return arrProgression.reduce((a, b) => a * b);
+	}
+	function progressionMinus(n) {
+		let arrProgression = [1];
+		for (let i = 2; i <= n; i++) {
+			arrProgression.push(i * 2 - 3);
+		}
+		return arrProgression.reduce((a, b) => a * b);
+	}
+	for (let i = 1; i <= N; i++) {
+		let res = (Math.pow(-1, i) * progressionMinus(i) * Math.pow(X, i)) / progression(i);
+		arr.push(res);
+	}
+	return arr.reduce((a, b) => a + b);
+}
+
+export function for29(N, B, A) {
+	let res;
+	let arr = [A];
+	if (A < B) {
+		if (N > 1) {
+			let H = (B - A) / N;
+			console.log("H =" + H);
+			for (let i = H; i <= H * N; i = i + H) {
+				console.log("I = " + i);
+				arr.push(A + i);
+				res = arr;
+				console.log("arr = " + arr);
+				console.log("res = " + res);
+			}
+		} else {
+			res = "Неправильные значения";
+		}
+	} else {
+		res = "Неправильные значения";
+	}
+	return res;
+}
+
+export function for30(N, B, A) {
 	let arr = [];
 	if (N > 14) {
 		if (A < B) {
@@ -317,7 +380,7 @@ function for30(N, B, A) {
 	}
 	return arr;
 }
-function for31(N) {
+export function for31(N) {
 	let arr = [2];
 	let lastRes = 2;
 	for (let i = 2; i <= N; i++) {
@@ -326,7 +389,7 @@ function for31(N) {
 	}
 	return arr;
 }
-function for32(N) {
+export function for32(N) {
 	let arr = [1];
 	let lastRes = 1;
 	for (let i = 0; i <= N; i++) {
@@ -335,34 +398,14 @@ function for32(N) {
 	}
 	return arr;
 }
-export {
-	for1,
-	for2,
-	for3,
-	for4,
-	for5,
-	for6,
-	for7,
-	for8,
-	for9,
-	for10,
-	for11,
-	for12,
-	for13,
-	for14,
-	for15,
-	for16,
-	for17,
-	for18,
-	for19,
-	for20,
-	for21,
-	for22,
-	for23,
-	for24,
-	for25,
-	for26,
-	for30,
-	for31,
-	for32,
-};
+
+export function for33(N) {
+	let arr = [1, 1];
+	let res = [];
+	for (let i = 2; i <= N; i++) {
+		arr.push(arr[i - 1] + arr[i - 2]);
+		//console.log("первое число " + arr[i - 1] + " " + "Второе число " + arr[i - 2] + " Массив " + arr);
+		res = arr;
+	}
+	return res;
+}

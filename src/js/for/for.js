@@ -1,35 +1,5 @@
 import { Task, pastInput, pastCard, title } from "./forConstructor.js";
-import {
-	for1,
-	for2,
-	for3,
-	for4,
-	for5,
-	for6,
-	for7,
-	for8,
-	for9,
-	for10,
-	for11,
-	for12,
-	for13,
-	for14,
-	for15,
-	for16,
-	for17,
-	for18,
-	for19,
-	for20,
-	for21,
-	for22,
-	for23,
-	for24,
-	for25,
-	for26,
-	for30,
-	for31,
-	for32,
-} from "./forFun.js";
+import * as f from "./forFun.js";
 {
 	const task = new Task({ num: "1", descriptions: `Даны целые числа K и N (N > 0). Вывести N раз число K.` });
 	pastCard(task);
@@ -38,7 +8,7 @@ import {
 	task.btn().addEventListener("click", (evt) => {
 		const K = Number(task.ID().querySelector(".K").value);
 		const N = Number(task.ID().querySelector(".N").value);
-		task.answer().innerHTML += `</br>` + for1(K, N);
+		task.answer().innerHTML += `</br>` + f.for1(K, N);
 	});
 }
 {
@@ -54,7 +24,7 @@ import {
 	task.btn().addEventListener("click", (evt) => {
 		const A = Number(task.ID().querySelector(".A").value);
 		const B = Number(task.ID().querySelector(".B").value);
-		task.answer().innerHTML += `</br>` + for2(A, B);
+		task.answer().innerHTML += `</br>` + f.for2(A, B);
 	});
 }
 {
@@ -70,7 +40,7 @@ import {
 	task.btn().addEventListener("click", (evt) => {
 		const A = Number(task.ID().querySelector(".A").value);
 		const B = Number(task.ID().querySelector(".B").value);
-		task.answer().innerHTML += `</br>` + for3(A, B);
+		task.answer().innerHTML += `</br>` + f.for3(A, B);
 	});
 }
 {
@@ -84,7 +54,7 @@ import {
 
 	task.btn().addEventListener("click", (evt) => {
 		const price = Number(task.ID().querySelector(".price").value);
-		task.answer().innerHTML += `</br>` + for4(price);
+		task.answer().innerHTML += `</br>` + f.for4(price);
 	});
 }
 {
@@ -98,7 +68,7 @@ import {
 
 	task.btn().addEventListener("click", (evt) => {
 		const price = Number(task.ID().querySelector(".price").value);
-		task.answer().innerHTML += for5(price) + `<br>`;
+		task.answer().innerHTML += f.for5(price) + `<br>`;
 	});
 }
 {
@@ -111,7 +81,7 @@ import {
 
 	task.btn().addEventListener("click", (evt) => {
 		const price = Number(task.ID().querySelector(".price").value);
-		task.answer().innerHTML += for6(price) + `<br>`;
+		task.answer().innerHTML += f.for6(price) + `<br>`;
 	});
 }
 {
@@ -127,7 +97,7 @@ import {
 	task.btn().addEventListener("click", (evt) => {
 		const A = Number(task.ID().querySelector(".A").value);
 		const B = Number(task.ID().querySelector(".B").value);
-		task.answer().innerHTML += for7(A, B) + `<br>`;
+		task.answer().innerHTML += f.for7(A, B) + `<br>`;
 	});
 }
 {
@@ -143,7 +113,7 @@ import {
 	task.btn().addEventListener("click", (evt) => {
 		const A = Number(task.ID().querySelector(".A").value);
 		const B = Number(task.ID().querySelector(".B").value);
-		task.answer().innerHTML += for8(A, B) + `<br>`;
+		task.answer().innerHTML += f.for8(A, B) + `<br>`;
 	});
 }
 {
@@ -159,7 +129,7 @@ import {
 	task.btn().addEventListener("click", (evt) => {
 		const A = Number(task.ID().querySelector(".A").value);
 		const B = Number(task.ID().querySelector(".B").value);
-		task.answer().innerHTML += for9(A, B) + `<br>`;
+		task.answer().innerHTML += f.for9(A, B) + `<br>`;
 	});
 }
 {
@@ -176,7 +146,7 @@ import {
 
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
-		task.answer().innerHTML += for10(N) + `<br>`;
+		task.answer().innerHTML += f.for10(N) + `<br>`;
 	});
 }
 {
@@ -196,7 +166,7 @@ N2 + (N + 1)2 + (N + 2)2 + . . . + (2·N)2
 
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
-		task.answer().innerHTML += for11(N) + `<br>`;
+		task.answer().innerHTML += f.for11(N) + `<br>`;
 	});
 }
 {
@@ -217,7 +187,7 @@ N2 + (N + 1)2 + (N + 2)2 + . . . + (2·N)2
 
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
-		task.answer().innerHTML += for12(N) + `<br>`;
+		task.answer().innerHTML += f.for12(N) + `<br>`;
 	});
 }
 {
@@ -235,7 +205,7 @@ N2 + (N + 1)2 + (N + 2)2 + . . . + (2·N)2
 
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
-		task.answer().innerHTML += for13(N) + `<br>`;
+		task.answer().innerHTML += f.for13(N) + `<br>`;
 	});
 }
 
@@ -254,7 +224,7 @@ N2 = 1 + 3 + 5 + . . . + (2·N − 1).
 
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
-		task.answer().innerHTML += for14(N) + `<br>`;
+		task.answer().innerHTML += f.for14(N) + `<br>`;
 	});
 }
 {
@@ -275,7 +245,7 @@ AN = A·A· . . . ·A
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
 		const A = Number(task.ID().querySelector(".A").value);
-		task.answer().innerHTML += for15(A, N) + `<br>`;
+		task.answer().innerHTML += f.for15(A, N) + `<br>`;
 	});
 }
 {
@@ -293,7 +263,7 @@ AN = A·A· . . . ·A
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
 		const A = Number(task.ID().querySelector(".A").value);
-		task.answer().innerHTML += for16(A, N) + `<br>`;
+		task.answer().innerHTML += f.for16(A, N) + `<br>`;
 	});
 }
 {
@@ -314,7 +284,7 @@ AN = A·A· . . . ·A
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
 		const A = Number(task.ID().querySelector(".A").value);
-		task.answer().innerHTML += for17(A, N) + `<br>`;
+		task.answer().innerHTML += f.for17(A, N) + `<br>`;
 	});
 }
 {
@@ -336,7 +306,7 @@ AN = A·A· . . . ·A
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
 		const A = Number(task.ID().querySelector(".A").value);
-		task.answer().innerHTML += for18(A, N) + `<br>`;
+		task.answer().innerHTML += f.for18(A, N) + `<br>`;
 	});
 }
 {
@@ -356,7 +326,7 @@ N! = 1·2·. . .·N (N–факториал).
 
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
-		task.answer().innerHTML += for19(N) + `<br>`;
+		task.answer().innerHTML += f.for19(N) + `<br>`;
 	});
 }
 {
@@ -375,7 +345,7 @@ N! = 1·2·. . .·N (N–факториал).
 
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
-		task.answer().innerHTML += for20(N) + `<br>`;
+		task.answer().innerHTML += f.for20(N) + `<br>`;
 	});
 }
 {
@@ -395,7 +365,7 @@ N! = 1·2·. . .·N (N–факториал).
 
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
-		task.answer().innerHTML += for21(N) + `<br>`;
+		task.answer().innerHTML += f.for21(N) + `<br>`;
 	});
 }
 {
@@ -418,7 +388,7 @@ N! = 1·2·. . .·N (N–факториал).
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
 		const X = Number(task.ID().querySelector(".X").value);
-		task.answer().innerHTML += for22(X, N) + `<br>`;
+		task.answer().innerHTML += f.for22(X, N) + `<br>`;
 	});
 }
 {
@@ -442,7 +412,7 @@ X − X 3/(3!) + X 5/(5!) − . . . + (−1)N ·X 2·N +1/((2·N+1)!)
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
 		const X = Number(task.ID().querySelector(".X").value);
-		task.answer().innerHTML += for23(X, N) + `<br>`;
+		task.answer().innerHTML += f.for23(X, N) + `<br>`;
 	});
 }
 {
@@ -467,7 +437,7 @@ X − X 3/(3!) + X 5/(5!) − . . . + (−1)N ·X 2·N +1/((2·N+1)!)
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
 		const X = Number(task.ID().querySelector(".X").value);
-		task.answer().innerHTML += for24(X, N) + `<br>`;
+		task.answer().innerHTML += f.for24(X, N) + `<br>`;
 	});
 }
 {
@@ -490,7 +460,7 @@ X − X 2/2 + X 3/3 − . . . + (−1)N −1·X N /N.
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
 		const X = Number(task.ID().querySelector(".X").value);
-		task.answer().innerHTML += for25(X, N) + `<br>`;
+		task.answer().innerHTML += f.for25(X, N) + `<br>`;
 	});
 }
 {
@@ -498,9 +468,11 @@ X − X 2/2 + X 3/3 − . . . + (−1)N −1·X N /N.
 		num: "26",
 		descriptions: `
 
+
 Дано вещественное число X (|X | < 1) и целое число N (> 0). Найти значение выражения
-X − X ^3/3 + X^ 5/5 − . . . + (−1)N ·X 2·N +1/(2·N+1).
+X − X 3/3 + X 5/5 − . . . + (−1)N ·X 2·N +1/(2·N+1).
 Полученное число является приближенным значением функции arctg в точке X.
+
 
 `,
 	});
@@ -512,7 +484,78 @@ X − X ^3/3 + X^ 5/5 − . . . + (−1)N ·X 2·N +1/(2·N+1).
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
 		const X = Number(task.ID().querySelector(".X").value);
-		task.answer().innerHTML += for26(X, N) + `<br>`;
+		task.answer().innerHTML += f.for26(X, N) + `<br>`;
+	});
+}
+{
+	const task = new Task({
+		num: "27",
+		descriptions: `
+
+
+Дано вещественное число X (|X | < 1) и целое число N (> 0). Найти значение выражения
+X + 1·X 3/(2·3) + 1·3·X 5/(2·4·5) + . . . + 1·3·. . .·(2·N−1)·X 2·N +1/(2·4·. . .·(2·N)·(2·N+1)).
+Полученное число является приближенным значением функции arcsin в точке X.
+
+
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+	pastInput(task, "X", "X");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		const X = Number(task.ID().querySelector(".X").value);
+		task.answer().innerHTML += f.for27(X, N) + `<br>`;
+	});
+}
+
+{
+	const task = new Task({
+		num: "28",
+		descriptions: `
+
+Дано вещественное число X (|X | < 1) и целое число N (> 0). Найти значение выражения
+1 + X /2 − 1·X 2/(2·4) + 1·3·X 3/(2·4·6) − . . . + (−1)N −1·1·3·. . .·(2·N−3)·X N /(2·4·. . .·(2·N)).
+Полученное число является приближенным значением функции √1+X .
+
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+	pastInput(task, "X", "X");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		const X = Number(task.ID().querySelector(".X").value);
+		task.answer().innerHTML += f.for28(X, N) + `<br>`;
+	});
+}
+{
+	const task = new Task({
+		num: "29",
+		descriptions: `
+
+Дано целое число N (> 1) и две вещественные точки на числовой оси:
+A, B (A < B). Отрезок [A, B] разбит на N равных отрезков. Вывести H — длину каждого отрезка, а также набор точек
+A, A + H, A + 2·H, A + 3·H, . . . , B, образующий разбиение отрезка [A, B].
+
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+	pastInput(task, "B", "B");
+	pastInput(task, "A", "A");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		const B = Number(task.ID().querySelector(".B").value);
+		const A = Number(task.ID().querySelector(".A").value);
+		task.answer().innerHTML += f.for29(N, B, A) + `<br>`;
 	});
 }
 {
@@ -533,7 +576,7 @@ X − X ^3/3 + X^ 5/5 − . . . + (−1)N ·X 2·N +1/(2·N+1).
 		const N = Number(task.ID().querySelector(".N").value);
 		const B = Number(task.ID().querySelector(".B").value);
 		const A = Number(task.ID().querySelector(".A").value);
-		task.answer().innerHTML += for30(N, B, A) + `<br>`;
+		task.answer().innerHTML += f.for30(N, B, A) + `<br>`;
 	});
 }
 {
@@ -550,7 +593,7 @@ X − X ^3/3 + X^ 5/5 − . . . + (−1)N ·X 2·N +1/(2·N+1).
 
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
-		task.answer().innerHTML += for31(N) + `<br>`;
+		task.answer().innerHTML += f.for31(N) + `<br>`;
 	});
 }
 {
@@ -567,6 +610,175 @@ X − X ^3/3 + X^ 5/5 − . . . + (−1)N ·X 2·N +1/(2·N+1).
 
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
-		task.answer().innerHTML += for32(N) + `<br>`;
+		task.answer().innerHTML += f.for32(N) + `<br>`;
+	});
+}
+
+{
+	const task = new Task({
+		num: "33",
+		descriptions: `
+
+Дано целое число N (> 1). Последовательность чисел Фибоначчи FK (целого типа) определяется следующим образом:
+F1 = 1, F2 = 1, FK = FK−2 + FK−1, K = 3, 4, . . . .
+Вывести элементы F1, F2, ..., FN.
+
+
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		task.answer().innerHTML += f.for33(N) + `<br>`;
+	});
+}
+{
+	const task = new Task({
+		num: "34",
+		descriptions: `
+
+Дано целое число N (> 1). Последовательность вещественных чисел AK определяется следующим образом:
+A1 = 1, A2 = 2, AK = (AK−2 + 2·AK−1)/3, K = 3, 4, . . . .
+Вывести элементы A1, A2, . . . , AN .
+
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+	pastInput(task, "X", "X");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		const X = Number(task.ID().querySelector(".X").value);
+		task.answer().innerHTML += f.for34(X, N) + `<br>`;
+	});
+}
+{
+	const task = new Task({
+		num: "35",
+		descriptions: `
+
+Дано целое число N (> 2). Последовательность целых чисел AK определяется следующим образом:
+A1 = 1, A2 = 2, A3 = 3,
+AK = AK−1 + AK−2 − 2·AK−3, K = 4, 5, . . . .
+Вывести элементы A1, A2, . . . , AN .
+
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+	pastInput(task, "X", "X");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		const X = Number(task.ID().querySelector(".X").value);
+		task.answer().innerHTML += f.for35(X, N) + `<br>`;
+	});
+}
+{
+	const task = new Task({
+		num: "36",
+		descriptions: `
+
+Даны целые положительные числа N и K. Найти сумму
+1K + 2K + . . . + NK .
+Чтобы избежать целочисленного переполнения, вычислять слагаемые этой суммы с помощью вещественной переменной и выводить результат как вещественное число.
+
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+	pastInput(task, "X", "X");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		const X = Number(task.ID().querySelector(".X").value);
+		task.answer().innerHTML += f.for36(X, N) + `<br>`;
+	});
+}
+{
+	const task = new Task({
+		num: "37",
+		descriptions: `
+
+Дано целое число N (> 0). Найти сумму
+11 + 22 + . . . + NN .
+Чтобы избежать целочисленного переполнения, вычислять слагаемые этой суммы с помощью вещественной переменной и выводить результат как вещественное число.
+
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+	pastInput(task, "X", "X");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		const X = Number(task.ID().querySelector(".X").value);
+		task.answer().innerHTML += f.for37(X, N) + `<br>`;
+	});
+}
+{
+	const task = new Task({
+		num: "38",
+		descriptions: `
+
+Дано целое число N (> 0). Найти сумму
+1N + 2N −1 + . . . + N1.
+Чтобы избежать целочисленного переполнения, вычислять слагаемые этой суммы с помощью вещественной переменной и выводить результат как вещественное число.
+
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+	pastInput(task, "X", "X");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		const X = Number(task.ID().querySelector(".X").value);
+		task.answer().innerHTML += f.for38(X, N) + `<br>`;
+	});
+}
+{
+	const task = new Task({
+		num: "39",
+		descriptions: `
+Даны целые положительные числа A и B (A < B). Вывести все целые числа от A до B включительно; при этом каждое число должно выводиться столько раз, каково его значение (например, число 3 выводится 3 раза).
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+	pastInput(task, "X", "X");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		const X = Number(task.ID().querySelector(".X").value);
+		task.answer().innerHTML += f.for39(X, N) + `<br>`;
+	});
+}
+{
+	const task = new Task({
+		num: "40",
+		descriptions: `
+Даны целые числа A и B (A < B). Вывести все целые числа от A до B включительно; при этом число A должно выводиться 1 раз, число A + 1 должно выводиться 2 раза и т. д.
+`,
+	});
+
+	pastCard(task);
+	pastInput(task, "N", "N");
+	pastInput(task, "X", "X");
+
+	task.btn().addEventListener("click", (evt) => {
+		const N = Number(task.ID().querySelector(".N").value);
+		const X = Number(task.ID().querySelector(".X").value);
+		task.answer().innerHTML += f.for40(X, N) + `<br>`;
 	});
 }
