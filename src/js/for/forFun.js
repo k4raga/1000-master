@@ -409,3 +409,76 @@ export function for33(N) {
 	}
 	return res;
 }
+export function for34(N) {
+	let arr = [1, 2];
+	let res = [];
+	for (let i = 2; i <= N; i++) {
+		arr.push((arr[i - 2] + 2 * arr[i - 1]) / i + 1);
+		console.log("первое число " + arr[i - 2] + " " + "Второе число " + 2 * arr[i - 1] + " Массив " + arr);
+		res = arr;
+	}
+	return res;
+}
+export function for35(N) {
+	let arr = [1, 2, 3];
+	let res = [];
+	for (let i = 3; i <= N; i++) {
+		arr.push(arr[i - 1] + arr[i - 2] - 2 * arr[i - 3]);
+		//console.log("первое число " + arr[i - 2] + " " + "Второе число " + 2 * arr[i - 1] + " Массив " + arr);
+		res = arr;
+	}
+	return res;
+}
+export function for36(N, K) {
+	let res = K;
+	for (let i = 2; i <= N; i++) {
+		res += i * K;
+	}
+	return res;
+}
+export function for37(N) {
+	let double = " " + N + N - " ";
+	let res = 11;
+	for (let i = 22; i <= double; i = i + 11) {
+		res += i;
+	}
+	return res;
+}
+export function for38(N) {
+	let res = 1;
+	let count = 0;
+	for (let i = N; i >= 1; i = i - 1) {
+		count++;
+		res += Math.pow(count, i);
+		console.log("счетчик " + count, "счетчик обратно " + i);
+	}
+	return res;
+}
+export function for39(A, B) {
+	let arr = [];
+	if (A < B) {
+		for (let i = A; i <= B; i++) {
+			for (let ii = 1; ii <= i; ii++) {
+				arr.push(i);
+			}
+		}
+	} else {
+		arr = "неверное условие";
+	}
+	return arr;
+}
+export function for40(A, B) {
+	let arr = [];
+	let diff;
+	if (A < B) {
+		for (let i = A; i <= B; i++) {
+			diff = i - A;
+			for (let ii = 1; ii <= diff + 1; ii++) {
+				arr.push(i);
+			}
+		}
+	} else {
+		arr = "неверное условие";
+	}
+	return arr;
+}

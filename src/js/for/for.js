@@ -649,12 +649,10 @@ A1 = 1, A2 = 2, AK = (AK−2 + 2·AK−1)/3, K = 3, 4, . . . .
 
 	pastCard(task);
 	pastInput(task, "N", "N");
-	pastInput(task, "X", "X");
 
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
-		const X = Number(task.ID().querySelector(".X").value);
-		task.answer().innerHTML += f.for34(X, N) + `<br>`;
+		task.answer().innerHTML += f.for34(N) + `<br>`;
 	});
 }
 {
@@ -672,12 +670,10 @@ AK = AK−1 + AK−2 − 2·AK−3, K = 4, 5, . . . .
 
 	pastCard(task);
 	pastInput(task, "N", "N");
-	pastInput(task, "X", "X");
 
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
-		const X = Number(task.ID().querySelector(".X").value);
-		task.answer().innerHTML += f.for35(X, N) + `<br>`;
+		task.answer().innerHTML += f.for35(N) + `<br>`;
 	});
 }
 {
@@ -694,12 +690,12 @@ AK = AK−1 + AK−2 − 2·AK−3, K = 4, 5, . . . .
 
 	pastCard(task);
 	pastInput(task, "N", "N");
-	pastInput(task, "X", "X");
+	pastInput(task, "K", "K");
 
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
-		const X = Number(task.ID().querySelector(".X").value);
-		task.answer().innerHTML += f.for36(X, N) + `<br>`;
+		const K = Number(task.ID().querySelector(".K").value);
+		task.answer().innerHTML += f.for36(N, K) + `<br>`;
 	});
 }
 {
@@ -716,12 +712,11 @@ AK = AK−1 + AK−2 − 2·AK−3, K = 4, 5, . . . .
 
 	pastCard(task);
 	pastInput(task, "N", "N");
-	pastInput(task, "X", "X");
 
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
-		const X = Number(task.ID().querySelector(".X").value);
-		task.answer().innerHTML += f.for37(X, N) + `<br>`;
+
+		task.answer().innerHTML += f.for37(N) + `<br>`;
 	});
 }
 {
@@ -738,12 +733,10 @@ AK = AK−1 + AK−2 − 2·AK−3, K = 4, 5, . . . .
 
 	pastCard(task);
 	pastInput(task, "N", "N");
-	pastInput(task, "X", "X");
 
 	task.btn().addEventListener("click", (evt) => {
 		const N = Number(task.ID().querySelector(".N").value);
-		const X = Number(task.ID().querySelector(".X").value);
-		task.answer().innerHTML += f.for38(X, N) + `<br>`;
+		task.answer().innerHTML += f.for38(N) + `<br>`;
 	});
 }
 {
@@ -755,13 +748,13 @@ AK = AK−1 + AK−2 − 2·AK−3, K = 4, 5, . . . .
 	});
 
 	pastCard(task);
-	pastInput(task, "N", "N");
-	pastInput(task, "X", "X");
+	pastInput(task, "B", "B");
+	pastInput(task, "A", "A");
 
 	task.btn().addEventListener("click", (evt) => {
-		const N = Number(task.ID().querySelector(".N").value);
-		const X = Number(task.ID().querySelector(".X").value);
-		task.answer().innerHTML += f.for39(X, N) + `<br>`;
+		const A = Number(task.ID().querySelector(".A").value);
+		const B = Number(task.ID().querySelector(".B").value);
+		task.answer().innerHTML += f.for39(A, B) + `<br>`;
 	});
 }
 {
@@ -773,12 +766,12 @@ AK = AK−1 + AK−2 − 2·AK−3, K = 4, 5, . . . .
 	});
 
 	pastCard(task);
-	pastInput(task, "N", "N");
-	pastInput(task, "X", "X");
+	pastInput(task, "B", "B");
+	pastInput(task, "A", "A");
 
 	task.btn().addEventListener("click", (evt) => {
-		const N = Number(task.ID().querySelector(".N").value);
-		const X = Number(task.ID().querySelector(".X").value);
-		task.answer().innerHTML += f.for40(X, N) + `<br>`;
+		const A = Number(task.ID().querySelector(".A").value);
+		const B = Number(task.ID().querySelector(".B").value);
+		task.answer().innerHTML += f.for40(A, B) + `<br>`;
 	});
 }
